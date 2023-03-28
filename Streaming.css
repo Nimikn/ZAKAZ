@@ -1,0 +1,162 @@
+*{
+    font-family: DejaVu Sans Mono, monospace;
+}
+body {
+    background-color: rgb(119, 119, 119);
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(119, 119, 119);
+    height: 50px;
+    width: 100%;
+    padding: 5px;
+}
+
+#bell {
+    background-color: rgb(204, 204, 204);
+    width: 20px;
+    height: 20px;
+}
+#bell:hover {
+    background-color: rgb(92, 92, 92);
+}
+
+#side_menu {
+    display: flex;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+#button_menu {
+    width: 23px;
+    height: 23px;
+    background-color: rgb(75, 228, 255);
+    margin-left: 10px;
+    border-radius: 50%;
+}
+#button_menu:hover {
+    background-color: rgb(32, 100, 112);
+}
+
+#search {
+    height: 18px;
+    border-radius: 7px 0px 0px 7px;
+    border: none;
+    margin-right: 0;
+}
+
+#search:hover {
+    border: solid black 1.5px;
+}
+#serching{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button {
+    height: 20px;
+    border: none;
+    border-radius: 0px 7px 7px 0px;
+}
+button:hover {
+    border: solid 1.5px;
+}
+
+#top_bar {
+    background-color: rgb(172, 172, 172);
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-around;
+    position: absolute;
+    right: 0;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    height: 70px;
+    width: 80%;
+}
+
+
+
+#top_bar p {
+    background-color: rgb(207, 207, 207);
+    color: rgb(0, 0, 0);
+    margin: 20px;
+    width: auto;
+    height: 20px;
+    border-radius: 10px;
+}
+#top_bar p:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(207, 207, 207);
+}
+#side_bar {
+    top: 0;
+    overflow-y: scroll;
+    max-height: 400px;
+    width: 20%;
+}
+
+#side {
+    position: relative;
+}
+
+.streamers {
+    background-color: rgb(66, 66, 66);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 15px;
+    animation: kak 2s infinite;
+}
+
+.streamer {
+    display: none;
+    background-color: rgb(66, 66, 66);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 15px;
+    margin: 15px;
+    animation: kak 2s infinite;
+}
+
+@keyframes kak{
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
+      }
+      
+      70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(255, 82, 82, 0);
+      }
+      
+      100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+      }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    height: 50px;
+    bottom: 0;
+    background-color: rgb(172, 172, 172);
+    left: 0;
+}
+
+@media (max-width: 600px){
+    #side_bar p{
+        display: none;
+    }
+    .streamer{
+        display: flex;
+    }
+
+}
