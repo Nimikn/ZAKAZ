@@ -1,9 +1,18 @@
 *{
     font-family: DejaVu Sans Mono, monospace;
 }
-body {
-    background-color: rgb(119, 119, 119);
+#icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: grab;
 }
+#name {
+    position: absolute;
+    left: 45px;
+    top:22px;
+}   
 header {
     display: flex;
     justify-content: space-between;
@@ -12,32 +21,57 @@ header {
     height: 50px;
     width: 100%;
     padding: 5px;
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
 }
-
 #bell {
-    background-color: rgb(204, 204, 204);
     width: 20px;
     height: 20px;
+    cursor: grab;
 }
 #bell:hover {
-    background-color: rgb(92, 92, 92);
+    color: rgb(207, 207, 207);
 }
 
 #side_menu {
     display: flex;
     padding: 5px;
     margin-right: 10px;
+    cursor: grab;
 }
 
 #button_menu {
-    width: 23px;
-    height: 23px;
-    background-color: rgb(75, 228, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
     margin-left: 10px;
-    border-radius: 50%;
 }
-#button_menu:hover {
-    background-color: rgb(32, 100, 112);
+#menu {
+    display: none;
+    flex-direction: row;
+    position: absolute;
+    right: 4.5%;
+    top: 2%;
+    background-color: #555;
+    border-radius: 20px;
+}
+#menu p{
+    margin-inline-start: 10px;
+    margin-inline-end: 10px;
+}
+#menu p:hover{
+    color: black;
+}
+#paw_menu:hover {
+    color: rgb(207, 207, 207);
+}
+#paw_menu:hover p{
+    color: white;
+}
+#button_menu:hover #menu{
+    display: flex;
 }
 
 #search {
@@ -49,6 +83,13 @@ header {
 
 #search:hover {
     border: solid black 1.5px;
+}
+#micro {
+    margin: 10px;
+    cursor: grab;
+}
+#micro:hover {
+    color: rgb(207, 207, 207);
 }
 #serching{
     display: flex;
@@ -65,39 +106,75 @@ button:hover {
 }
 
 #top_bar {
-    background-color: rgb(172, 172, 172);
     display: flex;
-    /* flex-direction: row; */
-    justify-content: space-around;
+    flex-direction: row;
+    overflow-x: scroll;
+    position: right;
     position: absolute;
     right: 0;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    height: 70px;
     width: 80%;
 }
+#pi {
+    background-color: #555;
+}
+::-webkit-scrollbar {
+    width: 7px;
+    border-radius: 20%px;
+    height: 0;
+}
+  
+:-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+   
 
-
-
+::-webkit-scrollbar-thumb {
+    background: rgb(207, 207, 207); 
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
 #top_bar p {
     background-color: rgb(207, 207, 207);
     color: rgb(0, 0, 0);
     margin: 20px;
-    width: auto;
+    width: 100px;
     height: 20px;
-    border-radius: 10px;
+    border-radius: 4px;
 }
 #top_bar p:hover{
+    background-color: rgb(107, 107, 107);
+    color: rgb(224, 224, 224);
+}
+#top_bar p:first-child{
     background-color: rgb(0, 0, 0);
-    color: rgb(207, 207, 207);
+    color: rgb(224, 224, 224);
 }
 #side_bar {
-    top: 0;
     overflow-y: scroll;
     max-height: 400px;
     width: 20%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 2px;
+    background-color: rgb(119, 119, 119);
+    font-size: large;
+    border-radius: 0px 0px 10px 10px;
 }
-
+.foll {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+.foll:hover{
+    background-color: rgb(207, 207, 207);
+}
+#side_bar:hover{
+    overflow-y: scroll;
+}
 #side {
     position: relative;
 }
@@ -108,7 +185,6 @@ button:hover {
     height: 30px;
     border-radius: 50%;
     margin-left: 15px;
-    animation: kak 2s infinite;
 }
 
 .streamer {
@@ -119,26 +195,28 @@ button:hover {
     border-radius: 50%;
     margin-left: 15px;
     margin: 15px;
+}
+#str{
     animation: kak 2s infinite;
 }
 
-@keyframes kak{
-    0% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
-      }
-      
-      70% {
-        transform: scale(1);
-        box-shadow: 0 0 0 10px rgba(255, 82, 82, 0);
-      }
-      
-      100% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
-      }
+#left_down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: fixed;
+    bottom: 55px;
+    width: 19.7%;
+    height: 15%;
+    font-size: larger;
+    background-color: rgb(119, 119, 119);
+    border-radius: 10px;
 }
-
+#icons:hover{
+    color: rgb(207, 207, 207);
+    transition: 0.8s;
+}
 footer {
     display: flex;
     justify-content: center;
@@ -149,8 +227,98 @@ footer {
     bottom: 0;
     background-color: rgb(172, 172, 172);
     left: 0;
+    border-radius: 10px 10px 0px 0px;
 }
-
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    position: absolute;
+    width: 78%;
+    right: 0;
+    height: 70%;
+    bottom: 60px;
+    overflow-y: scroll;
+    margin-top: 50%;
+}
+.video{
+    padding: -20px;
+    position: relative;
+    width: 200px;
+}
+#paw_video{
+    display: none;
+    position: absolute;
+    padding-left: 88px;
+    padding-top: 146%;
+    z-index: 1; 
+    border-radius: 5px;
+    cursor: grab;
+}
+#paw_video:focus .preview{
+    display: flex;
+}
+.preview{
+    width: 200px;
+    height: 131.33px;
+    border: solid 1px black;
+}
+.preview:hover{
+    filter: blur(2px);
+    box-shadow: 0px;
+}
+.live {
+    position: absolute;
+    margin-left: 3px;
+    margin-top: 3px;
+    background-color: rgb(255, 0, 0, 0.78);
+    color: white;
+    border-radius: 5px;
+    animation: live 2s infinite;
+    cursor:grab;
+    z-index: 1;
+}
+nav{
+    display: flex;
+    right: 0;
+}
+.name_v{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.sreamer_v{
+    color: rgb(97, 97, 97);
+}
+.viewers{
+    position: absolute;
+    top: 90px;
+    right: 7px;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border-radius: 3px;
+    cursor: grab;
+}
+.stream_icon{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    
+}
+::-moz-selection { /* Code for Firefox */
+    color: rgb(97, 97, 97);
+    background: rgb(199, 199, 199);
+}
+  
+::selection {
+    color: rgb(97, 97, 97);
+    background: rgb(199, 199, 199);
+}
+@media (max-width: 800px){
+    main{
+        grid-template-columns: 1fr 1fr;
+    }
+} 
 @media (max-width: 600px){
     #side_bar p{
         display: none;
@@ -158,5 +326,43 @@ footer {
     .streamer{
         display: flex;
     }
-
+    #search {
+        display: none;
+    }
+    button {
+        border-radius: 7px;
+    }
+    main{
+        grid-template-columns: 1fr;
+    }
+}
+@keyframes kak{
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
+      }
+      
+      70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(209, 0, 0, 0);
+      }
+      
+      100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(231, 0, 0, 0);
+      }
+}
+@keyframes live{
+    0% {
+        display: none; 
+    }
+    25%{
+        display: none;
+    }
+    75%{
+        display: flex;
+    }
+    100% {
+        display: flex; 
+    }
 }
