@@ -1,5 +1,10 @@
-*{
+    *{
     font-family: DejaVu Sans Mono, monospace;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(238, 238, 238);
 }
 #icon {
     display: flex;
@@ -12,6 +17,7 @@
     position: absolute;
     left: 45px;
     top:22px;
+    cursor: pointer;
 }   
 header {
     display: flex;
@@ -21,9 +27,9 @@ header {
     height: 50px;
     width: 100%;
     padding: 5px;
-    -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0 3px 5px 0 rgba(0,0,0,0.75);
+    -moz-box-shadow: 0 3px 5px 0 rgba(0,0,0,0.75);
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,0.75);
 }
 #bell {
     width: 20px;
@@ -37,7 +43,7 @@ header {
 #side_menu {
     display: flex;
     padding: 5px;
-    margin-right: 10px;
+    right: 10px;
     cursor: grab;
 }
 
@@ -46,13 +52,14 @@ header {
     justify-content: center;
     align-items: center;
     color: black;
-    margin-left: 10px;
+    margin: 10px;
 }
 #menu {
     display: none;
-    flex-direction: row;
+    flex-direction: column;
+    z-index: 1;
     position: absolute;
-    right: 4.5%;
+    right: 4%;
     top: 2%;
     background-color: #555;
     border-radius: 20px;
@@ -72,13 +79,15 @@ header {
 }
 #button_menu:hover #menu{
     display: flex;
+    position: fixed;
 }
 
 #search {
     height: 18px;
-    border-radius: 7px 0px 0px 7px;
+    border-radius: 7px 0 0 7px;
     border: none;
-    margin-right: 0;
+    right: 0;
+    cursor: pointer;
 }
 
 #search:hover {
@@ -95,11 +104,13 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 button {
     height: 20px;
     border: none;
-    border-radius: 0px 7px 7px 0px;
+    border-radius: 0 7px 7px 0;
+    cursor: pointer;
 }
 button:hover {
     border: solid 1.5px;
@@ -119,12 +130,13 @@ button:hover {
 }
 ::-webkit-scrollbar {
     width: 7px;
-    border-radius: 20%px;
     height: 0;
+    position: absolute;
 }
   
 :-webkit-scrollbar-track {
     background: #f1f1f1; 
+    position: absolute;
 }
    
 
@@ -142,6 +154,7 @@ button:hover {
     width: 100px;
     height: 20px;
     border-radius: 4px;
+    cursor: pointer;
 }
 #top_bar p:hover{
     background-color: rgb(107, 107, 107);
@@ -152,22 +165,29 @@ button:hover {
     color: rgb(224, 224, 224);
 }
 #side_bar {
-    overflow-y: scroll;
-    max-height: 400px;
+    overflow-y:hidden;
     width: 20%;
     position: absolute;
     top: 0;
     left: 0;
-    margin-top: 2px;
+    top: 2px;
     background-color: rgb(119, 119, 119);
     font-size: large;
-    border-radius: 0px 0px 10px 10px;
+    max-height: 400px;
+}
+.link{
+    position: absolute;
+    left: 40%;
+}
+.link:hover {
+    color: rgb(58, 58, 58);
 }
 .foll {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
+    cursor: pointer;
 }
 .foll:hover{
     background-color: rgb(207, 207, 207);
@@ -184,7 +204,7 @@ button:hover {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    margin-left: 15px;
+    margin: 15px;
 }
 
 .streamer {
@@ -193,7 +213,7 @@ button:hover {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    margin-left: 15px;
+    left: 15px;
     margin: 15px;
 }
 #str{
@@ -204,18 +224,21 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    position: fixed;
-    bottom: 55px;
-    width: 19.7%;
-    height: 15%;
+    width: 20%;
+    height: 17%;
+    top: 464px;
+    position: absolute;
     font-size: larger;
     background-color: rgb(119, 119, 119);
-    border-radius: 10px;
+    -webkit-box-shadow: 0px -1px 2px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 0px -1px 2px 0px rgba(0,0,0,1);
+    box-shadow: 0px -1px 2px 0px rgba(0,0,0,1);
+    border-radius: 0 0 10px 10px ;
 }
 #icons:hover{
     color: rgb(207, 207, 207);
     transition: 0.8s;
+    cursor: pointer;
 }
 footer {
     display: flex;
@@ -227,7 +250,7 @@ footer {
     bottom: 0;
     background-color: rgb(172, 172, 172);
     left: 0;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 10px 10px 0 0;
 }
 main{
     display: grid;
@@ -239,38 +262,39 @@ main{
     height: 70%;
     bottom: 60px;
     overflow-y: scroll;
-    margin-top: 50%;
+    justify-content: center;
+    align-items: center;
 }
 .video{
     padding: -20px;
     position: relative;
-    width: 200px;
+    width: 1fr;
+
 }
 #paw_video{
     display: none;
     position: absolute;
-    padding-left: 88px;
-    padding-top: 146%;
-    z-index: 1; 
-    border-radius: 5px;
-    cursor: grab;
+    left: 140px;
+    top: 100px;
 }
-#paw_video:focus .preview{
+.preview:hover #paw_video{
     display: flex;
+    z-index: 1;
 }
 .preview{
-    width: 200px;
-    height: 131.33px;
+    width: 300px;
+    height: 181.33px;    
     border: solid 1px black;
+    cursor: pointer;
 }
 .preview:hover{
     filter: blur(2px);
-    box-shadow: 0px;
+    box-shadow: 0;
 }
 .live {
     position: absolute;
-    margin-left: 3px;
-    margin-top: 3px;
+    left: 3px;
+    top: -13px;
     background-color: rgb(255, 0, 0, 0.78);
     color: white;
     border-radius: 5px;
@@ -281,31 +305,50 @@ main{
 nav{
     display: flex;
     right: 0;
+    width: 200px;
+    height: 70px;
+    padding: 0;
+    margin: 0;
 }
 .name_v{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    width: 260px;
+    cursor: pointer;
+    position: relative;
+    left: 40px;
+    top: -8%;
+}
+.name_v:hover{
+    color: rgb(97, 97, 97) ;
 }
 .sreamer_v{
     color: rgb(97, 97, 97);
+    cursor: pointer;
+    position: relative;
+    left: 40px;
+    top: -25%;
 }
 .viewers{
     position: absolute;
-    top: 90px;
-    right: 7px;
+    top: 55.3%;
+    left: 1.5%;
     background-color: rgba(0,0,0,0.5);
     color: white;
     border-radius: 3px;
     cursor: grab;
+    z-index: 1;
 }
 .stream_icon{
+    position: absolute;
     border-radius: 50%;
     width: 30px;
     height: 30px;
-    
+    cursor: pointer;
+    top: 200px;
 }
-::-moz-selection { /* Code for Firefox */
+::-moz-selection {
     color: rgb(97, 97, 97);
     background: rgb(199, 199, 199);
 }
@@ -314,9 +357,14 @@ nav{
     color: rgb(97, 97, 97);
     background: rgb(199, 199, 199);
 }
-@media (max-width: 800px){
+@media (max-width: 1200px){
     main{
         grid-template-columns: 1fr 1fr;
+    }
+} 
+@media (max-width: 800px){
+    main{
+        grid-template-columns: 1fr;
     }
 } 
 @media (max-width: 600px){
@@ -331,9 +379,6 @@ nav{
     }
     button {
         border-radius: 7px;
-    }
-    main{
-        grid-template-columns: 1fr;
     }
 }
 @keyframes kak{
@@ -355,12 +400,6 @@ nav{
 @keyframes live{
     0% {
         display: none; 
-    }
-    25%{
-        display: none;
-    }
-    75%{
-        display: flex;
     }
     100% {
         display: flex; 
