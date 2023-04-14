@@ -257,8 +257,8 @@ main{
     padding: -20px;
     position: relative;
 }
-#paw_video{
-    display: none;
+.paw_video{
+    display: none !important;
     position: absolute;
     left: 140px;
     top: 100px;
@@ -268,8 +268,8 @@ main{
 .specially_for_paw{
     width: 300px;
 }
-.specially_for_paw:hover #paw_video{
-    display: flex;
+.specially_for_paw:hover .paw_video{
+    display: flex !important;
     z-index: 1;
 }
 .preview{
