@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
         <link rel="stylesheet" href="Streaming.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.css"></link>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     </head>
     <body>
         <header>
-            <i class="fa-light fa-cat fa-xl"></i>
+            <div id="icon"><i class="fa-sharp fa-solid fa-cat fa-2xl"></i><p id="name">Сroissant TV</p></div>
             <div id="serching">
-                <input type="text" tabindex value="Search" id="search">
-                <button></button>
-                <div id="micro"></div>
+                <input type="text" placeholder="Search" id="search">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                <div id="micro"><i class="fa-solid fa-microphone-lines"></i></div>
             </div>
             <div id="side_menu">
-                <div id="bell"></div>
-                <div id="menu" style="display: none;">
-                    <ul style="list-style: none;">
-                        <li>link1</li>
-                        <li>link2</li>
-                        <li>link3</li>  
-                    </ul>
+                <div id="bell"><i class="fa-regular fa-bell fa-xl"></i></div>
+                <div id="button_menu">
+                    <i class="fa-solid fa-paw fa-xl" id="paw_menu">
+                        <div id="menu">
+                            <p class="menu_link"><i class="fa-solid fa-paw fa-xs"></i>  Profile</p>
+                            <p class="menu_link set"><i class="fa-solid fa-gear fa-xs"></i>  Settings</p>
+                            <p class="menu_link"><i class="fa-solid fa-arrow-right-from-bracket fa-xs"></i>  Logout</p>
+                        </div>
+                    </i>
                 </div>
-                <div id="button_menu"></div>
             </div>
         </header>
         <div id="top_bar">
-            <p>link1</p>
             <p>link2</p>
             <p>link3</p>
             <p>link4</p>
@@ -44,24 +45,135 @@
         </div>
         <div id="side">
             <div id="side_bar">
-                <p>link1 <img src="cat.jpg" class="streamers"></p><img src="cat.jpg" class="streamer">
-                <p>link2 <img src="cat.jpg" class="streamers"></p><img src="cat.jpg" class="streamer">
-                <p>link3 <img src="cat.jpg" class="streamers"></p><img src="cat.jpg" class="streamer">
-                <p>link4 <img src="cat.jpg" class="streamers"></p><img src="cat.jpg" class="streamer">
-                <p>link5 <img src="cat.jpg" class="streamers"></p><img src="cat.jpg" class="streamer">
-                <p>link6 <img src="cat.jpg" class="streamers"></p><img src="cat.jpg" class="streamer">
-                <p>link7 <img src="cat.jpg" class="streamers"></p><img src="cat.jpg" class="streamer">
-                <p>link8 <img src="cat.jpg" class="streamers"></p><img src="cat.jpg" class="streamer">
-                <p>link9 <img src="cat.jpg" class="streamers"></p><img src="cat.jpg" class="streamer">
-                <p>link10 <img src="cat.jpg" class="streamers"></p><img src="cat.jpg" class="streamer">
-                <p>link11 <img src="cat.jpg" class="streamers"></p><img src="cat.jpg" class="streamer">
-                <p>link12 <img src="cat.jpg" class="streamers"></p><img src="cat.jpg" class="streamer">
-                <p>link13 <img src="cat.jpg" class="streamers"></p><img src="cat.jpg" class="streamer">
-                <p>link14 <img src="cat.jpg" class="streamers"></p><img src="cat.jpg" class="streamer">
+                <div class="foll"><img src="cat.jpg" alt="streamer_icon" class="streamers" id="str"><p class="link">link1</p><p>5.6k</p></div><img src="cat.jpg" alt="streamer_icon" class="streamer">
+                <div class="foll"><img src="cat.jpg" alt="streamer_icon" class="streamers"><p class="link">link2</p><p>0</p></div><img src="cat.jpg" alt="streamer_icon" class="streamer">
+                <div class="foll"><img src="cat.jpg" alt="streamer_icon" class="streamers" id="str"><p class="link">link3</p><p>50k</p></div><img src="cat.jpg" alt="streamer_icon" class="streamer">
+                <div class="foll"><img src="cat.jpg" alt="streamer_icon" class="streamers" id="str"><p class="link">link4</p><p>6k</p></div><img src="cat.jpg" alt="streamer_icon" class="streamer">
+                <div class="foll"><img src="cat.jpg" alt="streamer_icon" class="streamers"><p class="link">link5</p><p>1.4k</p></div><img src="cat.jpg" alt="streamer_icon" class="streamer">
+                <div class="foll"><img src="cat.jpg" alt="streamer_icon" class="streamers"><p class="link">link6</p><p>5.6k</p></div><img src="cat.jpg" alt="streamer_icon" class="streamer">
+                <div class="foll"><img src="cat.jpg" alt="streamer_icon" class="streamers"><p class="link">link7</p><p>5.6k</p></div><img src="cat.jpg" alt="streamer_icon" class="streamer">
+                <div class="foll"><img src="cat.jpg" alt="streamer_icon" class="streamers" id="str"><p class="link">link8</p><p>5.6k</p></div><img src="cat.jpg" alt="streamer_icon" class="streamer">
+                <div class="foll"><img src="cat.jpg" alt="streamer_icon" class="streamers" id="str"><p class="link">link9</p><p>5.6k</p></div><img src="cat.jpg" alt="streamer_icon" class="streamer">
+                <div class="foll"><img src="cat.jpg" alt="streamer_icon" class="streamers" id="str"><p class="link">link10</p><p>5.6k</p></div><img src="cat.jpg" alt="streamer_icon" class="streamer">
+                <div class="foll"><img src="cat.jpg" alt="streamer_icon" class="streamers"><p class="link">link11</p><p>5.6k</p></div><img src="cat.jpg" alt="streamer_icon" class="streamer">
+                <div class="foll"><img src="cat.jpg" alt="streamer_icon" class="streamers"><p class="link">link12</p><p>5.6k</p></div><img src="cat.jpg" alt="streamer_icon" class="streamer">
+                <div class="foll"><img src="cat.jpg" alt="streamer_icon" class="streamers"><p class="link">link13</p><p>5.6k</p></div><img src="cat.jpg" alt="streamer_icon" class="streamer">
+                <div class="foll"><img src="cat.jpg" alt="streamer_icon" class="streamers"><p class="link">link14</p><p>5.6k</p></div><img src="cat.jpg" alt="streamer_icon" class="streamer">
             </div>
         </div>
+        <div id="left_down">
+            <div>
+                <i class="fa-brands fa-instagram" id="icons"></i>
+                <i class="fa-brands fa-telegram" id="icons"></i>
+                <i class="fa-brands fa-twitter" id="icons"></i>
+            </div>
+        </div>
+        <main>
+            <div class="video">
+                <div class="specially_for_paw">
+                    <i class="fa-solid fa-paw fa-xl paw_video"></i>
+                    <p class="live">live</p>
+                    <img src="twitch.webp" alt="preview" class="preview">
+                    <p class="viewers">4.6 viewers</p>
+                </div>
+                <nav>
+                    <img src="cat.jpg" alt="streamer_icon" class="stream_icon">
+                    <div class="for_p">
+                        <p class="name_v">Name of the videovName of the video</p>
+                        <p class="sreamer_v ">Name of streamer</p>
+                    </div>
+                </nav>
+            </div>
+            <div class="video">
+                <div class="specially_for_paw">
+                    <i class="fa-solid fa-paw fa-xl paw_video"></i>
+                    <img src="p1.jpg" alt="preview" class="preview">
+                    <p class="viewers">00:16</p>
+                </div>
+                <nav>
+                    <img src="cat.jpg" alt="streamer_icon" class="stream_icon">
+                    <div class="for_p">
+                        <p class="name_v">Name of the videovName of the video</p>
+                        <p class="sreamer_v ">Name of streamer</p>
+                    </div>
+                </nav>
+            </div>
+            <div class="video">
+                <div class="specially_for_paw">
+                    <p class="viewers">1.1k viewers</p>
+                    <i class="fa-solid fa-paw fa-xl paw_video"></i>
+                    <p class="live">live</p>
+                    <img src="p2.jpg" alt="preview" class="preview">
+                </div>
+                <nav>
+                    <img src="cat.jpg" alt="streamer_icon" class="stream_icon">
+                    <div class="for_p">
+                        <p class="name_v">Name of the videovName of the video</p>
+                        <p class="sreamer_v ">Name of streamer</p>
+                    </div>
+                </nav>
+            </div>
+            <div class="video">
+                <div class="specially_for_paw">
+                    <i class="fa-solid fa-paw fa-xl paw_video"></i>
+                    <img src="p3.jpg" alt="preview" class="preview">
+                    <p class="viewers">12:14</p>
+                </div>
+                <nav>
+                    <img src="cat.jpg"  alt="streamer_icon" class="stream_icon">
+                    <div class="for_p">
+                        <p class="name_v">Name of the videovName of the video</p>
+                        <p class="sreamer_v ">Name of streamer</p>
+                    </div>
+                </nav>
+            </div>
+            <div class="video">
+                <div class="specially_for_paw">
+                    <i class="fa-solid fa-paw fa-xl paw_video"></i>
+                    <img src="p4.jpg" alt="preview" class="preview">
+                    <p class="viewers">43:01</p>
+                </div>
+                <nav>
+                    <img src="cat.jpg" alt="streamer_icon" class="stream_icon">
+                    <div class="for_p">
+                        <p class="name_v">Name of the videovName of the video</p>
+                        <p class="sreamer_v ">Name of streamer</p>
+                    </div>
+                </nav>
+            </div>
+            <div class="video">
+                <div class="specially_for_paw">
+                    <i class="fa-solid fa-paw fa-xl paw_video"></i>
+                    <p class="live">live</p>
+                    <img src="p5.jpg" alt="preview" class="preview">
+                    <p class="viewers">4.6 viewers</p>
+                </div>
+                <nav>
+                    <img src="cat.jpg" alt="streamer_icon" class="stream_icon">
+                    <div class="for_p">
+                        <p class="name_v">Name of the videovName of the video</p>
+                        <p class="sreamer_v ">Name of streamer</p>
+                    </div>
+                </nav>
+            </div>
+            <div class="video">
+                <div class="specially_for_paw">
+                    <i class="fa-solid fa-paw fa-xl paw_video"></i>
+                    <p class="live">live</p>
+                    <img src="p6.jpg" alt="preview" class="preview">
+                    <p class="viewers">4.6 viewers</p>
+                </div>
+                <nav>
+                    <img src="cat.jpg" alt="streamer_icon" class="stream_icon">
+                    <div class="for_p">
+                        <p class="name_v">Name of the videovName of the video</p>
+                        <p class="sreamer_v ">Name of streamer</p>
+                    </div>
+                </nav>
+            </div>
+        </main>
         <footer>
-            Something about our information and contacts
+            Something about us, information and contacts
         </footer>
     </body>
 </html>
